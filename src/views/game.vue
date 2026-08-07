@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { computed } from 'vue'
+import { useRouter } from 'vue-router'
 import ClueOverlay from '@/components/ClueOverlay.vue'
 import ConfirmModal from '@/components/ConfirmModal.vue'
 import OptionCircle from '@/components/OptionCircle.vue'
@@ -6,8 +8,6 @@ import OptionRow from '@/components/OptionRow.vue'
 import TimeCircle from '@/components/TimeCircle.vue'
 import { useGameState } from '@/composables/useGameState'
 import { characters, rooms, times } from '@/config'
-import { computed } from 'vue'
-import { useRouter } from 'vue-router'
 
 const router = useRouter()
 const {
@@ -74,7 +74,7 @@ const roomOverlayImage = computed(() => {
 })
 
 const answerImageUrl = computed(() => {
-  return currentCase.value?.answerImage ?? '/images/placeholder.svg'
+  return currentCase.value?.answerImage ?? ''
 })
 
 function goHome() {

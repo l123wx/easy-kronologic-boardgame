@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useGameState } from '@/composables/useGameState'
 import { onActivated } from 'vue'
 import { useRouter } from 'vue-router'
+import { useGameState } from '@/composables/useGameState'
 
 const router = useRouter()
 const { reset } = useGameState()

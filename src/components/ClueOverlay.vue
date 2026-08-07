@@ -8,15 +8,6 @@ defineProps<{
 const emit = defineEmits<{
   close: []
 }>()
-
-const placeholderSrc = '/images/placeholder.svg'
-
-function handleImageError(e: Event) {
-  const img = e.target as HTMLImageElement
-  if (img.src !== placeholderSrc) {
-    img.src = placeholderSrc
-  }
-}
 </script>
 
 <template>
@@ -25,8 +16,8 @@ function handleImageError(e: Event) {
       <div v-if="visible" class="clue-overlay" @click.self="emit('close')">
         <div class="clue-content">
           <div class="clue-images">
-            <img :src="roomImage" alt="房间" class="clue-img clue-room" @error="handleImageError">
-            <img :src="targetImage" alt="线索" class="clue-img clue-target" @error="handleImageError">
+            <img :src="roomImage" alt="房间" class="clue-img clue-room">
+            <img :src="targetImage" alt="线索" class="clue-img clue-target">
           </div>
           <button class="close-btn" @click="emit('close')">
             关闭

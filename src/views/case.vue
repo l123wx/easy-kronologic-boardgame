@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useGameState } from '@/composables/useGameState'
-import { scripts } from '@/config'
 import { computed, ref } from 'vue'
 import { useRouter } from 'vue-router'
+import { useGameState } from '@/composables/useGameState'
+import { scripts } from '@/config'
 
 const router = useRouter()
 const { currentScript, currentCase, selectScript, selectCase } = useGameState()

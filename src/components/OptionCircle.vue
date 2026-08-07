@@ -10,15 +10,6 @@ defineProps<{
 const emit = defineEmits<{
   select: [id: string]
 }>()
-
-const placeholderSrc = '/images/placeholder.svg'
-
-function handleImageError(e: Event) {
-  const img = e.target as HTMLImageElement
-  if (img.src !== placeholderSrc) {
-    img.src = placeholderSrc
-  }
-}
 </script>
 
 <template>
@@ -32,7 +23,6 @@ function handleImageError(e: Event) {
         :src="item.iconImage"
         :alt="item.name"
         class="circle-img"
-        @error="handleImageError"
       >
     </div>
     <span class="circle-name">{{ item.name }}</span>

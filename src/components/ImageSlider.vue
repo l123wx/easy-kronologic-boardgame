@@ -33,15 +33,6 @@ function onTouchEnd(e: TouchEvent) {
     else prev()
   }
 }
-
-const placeholderSrc = '/images/placeholder.svg'
-
-function handleImageError(e: Event) {
-  const img = e.target as HTMLImageElement
-  if (img.src !== placeholderSrc) {
-    img.src = placeholderSrc
-  }
-}
 </script>
 
 <template>
@@ -51,7 +42,6 @@ function handleImageError(e: Event) {
         :src="images[currentIndex]"
         :alt="`设置图 ${currentIndex + 1}`"
         class="slider-image"
-        @error="handleImageError"
       >
     </div>
 
