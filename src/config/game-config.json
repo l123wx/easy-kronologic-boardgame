@@ -1,28 +1,109 @@
 {
   "rooms": {
-    "grand-foyer": { "id": "grand-foyer", "name": "大前厅", "iconImage": "./images/place_大前厅.png" },
-    "grand-staircase": { "id": "grand-staircase", "name": "大阶梯", "iconImage": "./images/place_大阶梯.png" },
-    "stage": { "id": "stage", "name": "舞台", "iconImage": "./images/place_舞台.png" },
-    "music-room": { "id": "music-room", "name": "音乐厅", "iconImage": "./images/place_音乐厅.png" },
-    "gallery": { "id": "gallery", "name": "画廊", "iconImage": "./images/place_画廊.png" },
-    "ballroom": { "id": "ballroom", "name": "舞厅", "iconImage": "./images/place_舞厅.png" }
+    "grand-foyer": {
+      "id": "grand-foyer",
+      "name": "大前厅",
+      "iconImage": "./images/place_大前厅.png"
+    },
+    "grand-staircase": {
+      "id": "grand-staircase",
+      "name": "大阶梯",
+      "iconImage": "./images/place_大阶梯.png"
+    },
+    "stage": {
+      "id": "stage",
+      "name": "舞台",
+      "iconImage": "./images/place_舞台.png"
+    },
+    "music-room": {
+      "id": "music-room",
+      "name": "音乐厅",
+      "iconImage": "./images/place_音乐厅.png"
+    },
+    "gallery": {
+      "id": "gallery",
+      "name": "画廊",
+      "iconImage": "./images/place_画廊.png"
+    },
+    "ballroom": {
+      "id": "ballroom",
+      "name": "舞厅",
+      "iconImage": "./images/place_舞厅.png"
+    }
   },
   "times": {
-    "1": { "id": "1", "name": "1", "iconImage": "./images/time_1.png" },
-    "2": { "id": "2", "name": "2", "iconImage": "./images/time_2.png" },
-    "3": { "id": "3", "name": "3", "iconImage": "./images/time_3.png" },
-    "4": { "id": "4", "name": "4", "iconImage": "./images/time_4.png" },
-    "5": { "id": "5", "name": "5", "iconImage": "./images/time_5.png" },
-    "6": { "id": "6", "name": "6", "iconImage": "./images/time_6.png" }
+    "1": {
+      "id": "1",
+      "name": "1",
+      "iconImage": "./images/time_1.png"
+    },
+    "2": {
+      "id": "2",
+      "name": "2",
+      "iconImage": "./images/time_2.png"
+    },
+    "3": {
+      "id": "3",
+      "name": "3",
+      "iconImage": "./images/time_3.png"
+    },
+    "4": {
+      "id": "4",
+      "name": "4",
+      "iconImage": "./images/time_4.png"
+    },
+    "5": {
+      "id": "5",
+      "name": "5",
+      "iconImage": "./images/time_5.png"
+    },
+    "6": {
+      "id": "6",
+      "name": "6",
+      "iconImage": "./images/time_6.png"
+    }
   },
   "characters": {
-    "duchess": { "id": "duchess", "name": "女爵", "iconImage": "./images/people_1.png" },
-    "explorer": { "id": "explorer", "name": "探险家", "iconImage": "./images/people_2.jpg" },
-    "detective": { "id": "detective", "name": "侦探", "iconImage": "./images/people_3.png" },
-    "maid": { "id": "maid", "name": "女仆", "iconImage": "./images/people_4.png" },
-    "driver": { "id": "driver", "name": "司机", "iconImage": "./images/people_5.jpg" },
-    "journalist": { "id": "journalist", "name": "记者", "iconImage": "./images/people_6.png" }
+    "duchess": {
+      "id": "duchess",
+      "name": "女爵",
+      "iconImage": "./images/people_1.png"
+    },
+    "explorer": {
+      "id": "explorer",
+      "name": "探险家",
+      "iconImage": "./images/people_2.jpg"
+    },
+    "detective": {
+      "id": "detective",
+      "name": "侦探",
+      "iconImage": "./images/people_3.png"
+    },
+    "maid": {
+      "id": "maid",
+      "name": "女仆",
+      "iconImage": "./images/people_4.png"
+    },
+    "driver": {
+      "id": "driver",
+      "name": "司机",
+      "iconImage": "./images/people_5.jpg"
+    },
+    "journalist": {
+      "id": "journalist",
+      "name": "记者",
+      "iconImage": "./images/people_6.png"
+    }
   },
+  "rulesImages": [
+    "./images/rule-1.jpg",
+    "./images/rule-2.jpg",
+    "./images/rule-3.jpg",
+    "./images/rule-4.jpg",
+    "./images/rule-5.jpg",
+    "./images/rule-6.jpg"
+  ],
+  "answerSheetImage": "./images/answer_sheet.png",
   "scripts": [
     {
       "id": "Poison in High Society",
@@ -32,7 +113,11 @@
           "id": "case-1",
           "name": "案件一",
           "difficulty": 1,
-          "setupImages": ["./images/setup_1-1.jpg", "./images/setup_1-2.jpg", "./images/setup_1_1.jpg"],
+          "setupImages": [
+            "./images/setup_1-1.jpg",
+            "./images/setup_1-2.jpg",
+            "./images/setup_1_1.jpg"
+          ],
           "answerImage": "./images/answer_1_1.jpg",
           "cardImages": {
             "rooms": {
@@ -65,7 +150,11 @@
           "id": "case-2",
           "name": "案件二",
           "difficulty": 2,
-          "setupImages": ["./images/setup_1-1.jpg", "./images/setup_1-2.jpg", "./images/setup_1_2.jpg"],
+          "setupImages": [
+            "./images/setup_1-1.jpg",
+            "./images/setup_1-2.jpg",
+            "./images/setup_1_2.jpg"
+          ],
           "answerImage": "./images/answer_1_2.jpg",
           "cardImages": {
             "rooms": {
@@ -98,7 +187,11 @@
           "id": "case-3",
           "name": "案件三",
           "difficulty": 2,
-          "setupImages": ["./images/setup_1-1.jpg", "./images/setup_1-2.jpg", "./images/setup_1_3.jpg"],
+          "setupImages": [
+            "./images/setup_1-1.jpg",
+            "./images/setup_1-2.jpg",
+            "./images/setup_1_3.jpg"
+          ],
           "answerImage": "./images/answer_1_3.jpg",
           "cardImages": {
             "rooms": {
@@ -131,7 +224,11 @@
           "id": "case-4",
           "name": "案件四",
           "difficulty": 2,
-          "setupImages": ["./images/setup_1-1.jpg", "./images/setup_1-2.jpg", "./images/setup_1_4.jpg"],
+          "setupImages": [
+            "./images/setup_1-1.jpg",
+            "./images/setup_1-2.jpg",
+            "./images/setup_1_4.jpg"
+          ],
           "answerImage": "./images/answer_1_4.jpg",
           "cardImages": {
             "rooms": {
@@ -164,7 +261,11 @@
           "id": "case-5",
           "name": "案件五",
           "difficulty": 3,
-          "setupImages": ["./images/setup_1-1.jpg", "./images/setup_1-2.jpg", "./images/setup_1_5.jpg"],
+          "setupImages": [
+            "./images/setup_1-1.jpg",
+            "./images/setup_1-2.jpg",
+            "./images/setup_1_5.jpg"
+          ],
           "answerImage": "./images/answer_1_5.jpg",
           "cardImages": {
             "rooms": {
@@ -203,7 +304,11 @@
           "id": "case-1",
           "name": "案件一",
           "difficulty": 3,
-          "setupImages": ["./images/setup_2-1.jpg", "./images/setup_2-2.jpg", "./images/setup_2_1.jpg"],
+          "setupImages": [
+            "./images/setup_2-1.jpg",
+            "./images/setup_2-2.jpg",
+            "./images/setup_2_1.jpg"
+          ],
           "answerImage": "./images/answer_2_1.jpg",
           "cardImages": {
             "rooms": {
@@ -236,7 +341,11 @@
           "id": "case-2",
           "name": "案件二",
           "difficulty": 3,
-          "setupImages": ["./images/setup_2-1.jpg", "./images/setup_2-2.jpg", "./images/setup_2_2.jpg"],
+          "setupImages": [
+            "./images/setup_2-1.jpg",
+            "./images/setup_2-2.jpg",
+            "./images/setup_2_2.jpg"
+          ],
           "answerImage": "./images/answer_2_2.jpg",
           "cardImages": {
             "rooms": {
@@ -269,7 +378,11 @@
           "id": "case-3",
           "name": "案件三",
           "difficulty": 4,
-          "setupImages": ["./images/setup_2-1.jpg", "./images/setup_2-2.jpg", "./images/setup_2_3.jpg"],
+          "setupImages": [
+            "./images/setup_2-1.jpg",
+            "./images/setup_2-2.jpg",
+            "./images/setup_2_3.jpg"
+          ],
           "answerImage": "./images/answer_2_3.jpg",
           "cardImages": {
             "rooms": {
@@ -302,7 +415,11 @@
           "id": "case-4",
           "name": "案件四",
           "difficulty": 4,
-          "setupImages": ["./images/setup_2-1.jpg", "./images/setup_2-2.jpg", "./images/setup_2_4.jpg"],
+          "setupImages": [
+            "./images/setup_2-1.jpg",
+            "./images/setup_2-2.jpg",
+            "./images/setup_2_4.jpg"
+          ],
           "answerImage": "./images/answer_2_4.jpg",
           "cardImages": {
             "rooms": {
@@ -335,7 +452,11 @@
           "id": "case-5",
           "name": "案件五",
           "difficulty": 4,
-          "setupImages": ["./images/setup_2-1.jpg", "./images/setup_2-2.jpg", "./images/setup_2_5.jpg"],
+          "setupImages": [
+            "./images/setup_2-1.jpg",
+            "./images/setup_2-2.jpg",
+            "./images/setup_2_5.jpg"
+          ],
           "answerImage": "./images/answer_2_5.jpg",
           "cardImages": {
             "rooms": {
@@ -374,7 +495,11 @@
           "id": "case-1",
           "name": "案件一",
           "difficulty": 3,
-          "setupImages": ["./images/setup_3-1.jpg", "./images/setup_3-2.jpg", "./images/setup_3_1.jpg"],
+          "setupImages": [
+            "./images/setup_3-1.jpg",
+            "./images/setup_3-2.jpg",
+            "./images/setup_3_1.jpg"
+          ],
           "answerImage": "./images/answer_3_1.jpg",
           "cardImages": {
             "rooms": {
@@ -407,7 +532,11 @@
           "id": "case-2",
           "name": "案件二",
           "difficulty": 4,
-          "setupImages": ["./images/setup_3-1.jpg", "./images/setup_3-2.jpg", "./images/setup_3_2.jpg"],
+          "setupImages": [
+            "./images/setup_3-1.jpg",
+            "./images/setup_3-2.jpg",
+            "./images/setup_3_2.jpg"
+          ],
           "answerImage": "./images/answer_3_2.jpg",
           "cardImages": {
             "rooms": {
@@ -440,7 +569,11 @@
           "id": "case-3",
           "name": "案件三",
           "difficulty": 4,
-          "setupImages": ["./images/setup_3-1.jpg", "./images/setup_3-2.jpg", "./images/setup_3_3.jpg"],
+          "setupImages": [
+            "./images/setup_3-1.jpg",
+            "./images/setup_3-2.jpg",
+            "./images/setup_3_3.jpg"
+          ],
           "answerImage": "./images/answer_3_3.jpg",
           "cardImages": {
             "rooms": {
@@ -473,7 +606,11 @@
           "id": "case-4",
           "name": "案件四",
           "difficulty": 4,
-          "setupImages": ["./images/setup_3-1.jpg", "./images/setup_3-2.jpg", "./images/setup_3_4.jpg"],
+          "setupImages": [
+            "./images/setup_3-1.jpg",
+            "./images/setup_3-2.jpg",
+            "./images/setup_3_4.jpg"
+          ],
           "answerImage": "./images/answer_3_4.jpg",
           "cardImages": {
             "rooms": {
@@ -506,7 +643,11 @@
           "id": "case-5",
           "name": "案件五",
           "difficulty": 5,
-          "setupImages": ["./images/setup_3-1.jpg", "./images/setup_3-2.jpg", "./images/setup_3_5.jpg"],
+          "setupImages": [
+            "./images/setup_3-1.jpg",
+            "./images/setup_3-2.jpg",
+            "./images/setup_3_5.jpg"
+          ],
           "answerImage": "./images/answer_3_5.jpg",
           "cardImages": {
             "rooms": {

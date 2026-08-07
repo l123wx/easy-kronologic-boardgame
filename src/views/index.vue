@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import { useGameState } from '@/composables/useGameState'
+import { answerSheetImage } from '@/config'
 import { onActivated } from 'vue'
 import { useRouter } from 'vue-router'
-import { useGameState } from '@/composables/useGameState'
 
 const router = useRouter()
 const { reset } = useGameState()
@@ -12,6 +13,21 @@ onActivated(() => {
 
 function startGame() {
   router.push('/case')
+}
+
+function viewRules() {
+  router.push('/rules')
+}
+
+async function downloadAnswerSheet() {
+  const resp = await fetch(answerSheetImage)
+  const blob = await resp.blob()
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = answerSheetImage.split('/').pop() || '答题卡.jpg'
+  a.click()
+  URL.revokeObjectURL(url)
 }
 </script>
 
@@ -28,6 +44,12 @@ function startGame() {
       </div>
       <button class="start-btn" @click="startGame">
         开始游戏
+      </button>
+      <button class="rules-btn" @click="viewRules">
+        查看规则
+      </button>
+      <button class="rules-btn" @click="downloadAnswerSheet">
+        下载答题卡
       </button>
     </div>
   </div>
@@ -68,7 +90,8 @@ function startGame() {
 }
 
 .start-btn {
-  padding: 16px 64px;
+  width: 220px;
+  padding: 16px 0;
   font-size: 20px;
   font-weight: 600;
   color: #fff;
@@ -83,5 +106,24 @@ function startGame() {
 
 .start-btn:active {
   transform: scale(0.96);
+}
+
+.rules-btn {
+  width: 220px;
+  margin-top: 16px;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: background 0.2s;
+}
+
+.rules-btn:active {
+  background: rgba(255, 255, 255, 0.15);
 }
 </style>
