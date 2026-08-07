@@ -32,7 +32,7 @@
           "id": "case-1",
           "name": "案件一",
           "difficulty": 1,
-          "setupImages": ["./images/setup_1-1.png", "./images/setup_1-2.png", "./images/setup_1_1.jpg"],
+          "setupImages": ["./images/setup_1-1.jpg", "./images/setup_1-2.jpg", "./images/setup_1_1.jpg"],
           "answerImage": "./images/placeholder.svg",
           "cardImages": {
             "rooms": {

@@ -1,6 +1,6 @@
 import type { CaseInfo, Script } from '@/types'
-import { computed, reactive, readonly, watch } from 'vue'
 import { scripts } from '@/config'
+import { computed, reactive, readonly, watch } from 'vue'
 
 interface PersistedState {
   currentScriptId: string | null
