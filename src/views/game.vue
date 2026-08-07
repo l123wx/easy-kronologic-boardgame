@@ -6,7 +6,7 @@ import OptionRow from '@/components/OptionRow.vue'
 import TimeCircle from '@/components/TimeCircle.vue'
 import { useGameState } from '@/composables/useGameState'
 import { characters, rooms, times } from '@/config'
-import { computed, onMounted } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
@@ -88,25 +88,54 @@ function handleRevealAnswer() {
 
 const confirmMessage = '确认提交答案吗？\n每人仅有一次回答机会，猜错则直接出局。\n查看答案之后，无论对错，都不要将答案告诉其他玩家，以免影响游戏体验。'
 
+// 预加载进度
+const loading = ref(true)
+const loadedCount = ref(0)
+const totalCount = ref(0)
+const loadingPercent = computed(() => totalCount.value === 0 ? 0 : Math.round((loadedCount.value / totalCount.value) * 100))
+
+function preloadImage(url: string): Promise<void> {
+  return new Promise((resolve) => {
+    const img = new Image()
+    img.onload = () => { loadedCount.value++; resolve() }
+    img.onerror = () => { loadedCount.value++; resolve() }
+    img.src = url
+  })
+}
+
 // 预加载当前案件的所有重叠图，防止点击查看线索时先露出房间图
-onMounted(() => {
-  if (!currentCase.value)
+onMounted(async () => {
+  if (!currentCase.value) {
+    loading.value = false
     return
+  }
   const images = currentCase.value.cardImages
   const urls = [
     ...Object.values(images.rooms),
     ...Object.values(images.times),
     ...Object.values(images.characters),
   ]
-  urls.forEach((url) => {
-    const img = new Image()
-    img.src = url
-  })
+  totalCount.value = urls.length
+  await Promise.all(urls.map(preloadImage))
+  loading.value = false
 })
 </script>
 
 <template>
   <div class="game-page">
+    <!-- 预加载进度层 -->
+    <Transition name="fade">
+      <div v-if="loading" class="loading-overlay">
+        <div class="loading-content">
+          <p class="loading-text">资源加载中...</p>
+          <div class="progress-bar">
+            <div class="progress-fill" :style="{ width: loadingPercent + '%' }" />
+          </div>
+          <p class="loading-count">{{ loadedCount }} / {{ totalCount }}</p>
+        </div>
+      </div>
+    </Transition>
+
     <div class="game-header">
       <button class="header-btn home-btn" @click="goHome">
         返回首页
@@ -355,5 +384,51 @@ onMounted(() => {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+/* 预加载进度层 */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5000;
+}
+
+.loading-content {
+  text-align: center;
+  color: #fff;
+}
+
+.loading-text {
+  font-size: 18px;
+  margin: 0 0 16px;
+}
+
+.progress-bar {
+  width: 200px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  overflow: hidden;
+  margin: 0 auto 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #4a90d9;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.loading-count {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
 }
 </style>
