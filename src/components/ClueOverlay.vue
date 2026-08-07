@@ -28,7 +28,9 @@ function handleImageError(e: Event) {
             <img :src="roomImage" alt="房间" class="clue-img clue-room" @error="handleImageError">
             <img :src="targetImage" alt="线索" class="clue-img clue-target" @error="handleImageError">
           </div>
-          <button class="close-btn" @click="emit('close')">关闭</button>
+          <button class="close-btn" @click="emit('close')">
+            关闭
+          </button>
         </div>
       </div>
     </Transition>

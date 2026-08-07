@@ -16,11 +16,19 @@ const emit = defineEmits<{
     <Transition name="fade">
       <div v-if="visible" class="modal-overlay" @click.self="emit('cancel')">
         <div class="modal-content">
-          <h3 class="modal-title">{{ title }}</h3>
-          <p class="modal-message">{{ message }}</p>
+          <h3 class="modal-title">
+            {{ title }}
+          </h3>
+          <p class="modal-message">
+            {{ message }}
+          </p>
           <div class="modal-actions">
-            <button class="btn-cancel" @click="emit('cancel')">取消</button>
-            <button class="btn-confirm" @click="emit('confirm')">确认</button>
+            <button class="btn-cancel" @click="emit('cancel')">
+              取消
+            </button>
+            <button class="btn-confirm" @click="emit('confirm')">
+              确认
+            </button>
           </div>
         </div>
       </div>

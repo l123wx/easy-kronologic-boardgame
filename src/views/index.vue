@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import { useGameState } from '@/composables/useGameState'
 import { onActivated } from 'vue'
 import { useRouter } from 'vue-router'
-import { useGameState } from '@/composables/useGameState'
 
 const router = useRouter()
 const { reset } = useGameState()
@@ -19,8 +19,12 @@ function startGame() {
   <div class="home">
     <div class="home-content">
       <div class="title-area">
-        <h1 class="game-title">时空神探</h1>
-        <p class="game-subtitle">Kronologic Board Game Assistant</p>
+        <h1 class="game-title">
+          时空神探
+        </h1>
+        <p class="game-subtitle">
+          Kronologic Board Game Assistant
+        </p>
       </div>
       <button class="start-btn" @click="startGame">
         开始游戏

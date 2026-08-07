@@ -8,7 +8,9 @@ defineProps<{
 <template>
   <div class="option-row">
     <div class="row-header">
-      <h3 class="row-title">{{ title }}</h3>
+      <h3 class="row-title">
+        {{ title }}
+      </h3>
       <span v-if="label" class="row-label" :class="{ required: label === '必选' }">{{ label }}</span>
     </div>
     <div class="row-content">

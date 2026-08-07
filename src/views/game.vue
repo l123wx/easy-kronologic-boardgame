@@ -28,17 +28,20 @@ const {
 } = useGameState()
 
 const roomList = computed(() => {
-  if (!currentCase.value) return []
+  if (!currentCase.value)
+    return []
   return Object.keys(currentCase.value.cardImages.rooms).map(id => rooms[id]).filter(Boolean)
 })
 
 const timeList = computed(() => {
-  if (!currentCase.value) return []
+  if (!currentCase.value)
+    return []
   return Object.keys(currentCase.value.cardImages.times).map(id => times[id]).filter(Boolean)
 })
 
 const characterList = computed(() => {
-  if (!currentCase.value) return []
+  if (!currentCase.value)
+    return []
   return Object.keys(currentCase.value.cardImages.characters).map(id => characters[id]).filter(Boolean)
 })
 

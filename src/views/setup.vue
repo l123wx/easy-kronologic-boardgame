@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
-import { useGameState } from '@/composables/useGameState'
 import ImageSlider from '@/components/ImageSlider.vue'
+import { useGameState } from '@/composables/useGameState'
+import { useRouter } from 'vue-router'
 
 const router = useRouter()
 const { currentCase, currentScript } = useGameState()
@@ -19,11 +19,17 @@ function goBack() {
 
 <template>
   <div class="setup-page">
-    <h1 class="page-title">初始设置</h1>
+    <h1 class="page-title">
+      初始设置
+    </h1>
 
     <div v-if="currentScript && currentCase" class="setup-info">
-      <p class="script-name">{{ currentScript.name }}</p>
-      <p class="case-name">{{ currentCase.name }}</p>
+      <p class="script-name">
+        {{ currentScript.name }}
+      </p>
+      <p class="case-name">
+        {{ currentCase.name }}
+      </p>
     </div>
 
     <div v-if="currentCase" class="setup-images">
@@ -32,11 +38,15 @@ function goBack() {
 
     <div v-else class="no-data">
       <p>未选择案件，请返回重新选择</p>
-      <button class="btn-back" @click="goBack">返回选择</button>
+      <button class="btn-back" @click="goBack">
+        返回选择
+      </button>
     </div>
 
     <div class="actions">
-      <button class="btn-secondary" @click="goBack">返回</button>
+      <button class="btn-secondary" @click="goBack">
+        返回
+      </button>
       <button class="btn-primary" :disabled="!currentCase" @click="startGame">
         开始游戏
       </button>

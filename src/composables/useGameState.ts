@@ -1,6 +1,6 @@
-import { computed, reactive, readonly, watch } from 'vue'
 import type { CaseInfo, Script } from '@/types'
 import { scripts } from '@/config'
+import { computed, reactive, readonly, watch } from 'vue'
 
 interface PersistedState {
   currentScriptId: string | null
@@ -22,7 +22,8 @@ const STORAGE_KEY = 'kronologic-game-state'
 function loadPersistedState(): PersistedState {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
-    if (raw) return JSON.parse(raw)
+    if (raw)
+      return JSON.parse(raw)
   }
   catch {}
   return {

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
-import { useRouter } from 'vue-router'
 import { useGameState } from '@/composables/useGameState'
 import { scripts } from '@/config'
+import { computed, ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 const router = useRouter()
 const { currentScript, currentCase, selectScript, selectCase } = useGameState()
@@ -40,11 +40,15 @@ function difficultyStars(count: number): string {
 
 <template>
   <div class="case-page">
-    <h1 class="page-title">案件选择</h1>
+    <h1 class="page-title">
+      案件选择
+    </h1>
 
     <!-- 选择剧本 -->
     <div class="section">
-      <h2 class="section-title">选择剧本</h2>
+      <h2 class="section-title">
+        选择剧本
+      </h2>
       <div class="card-list">
         <div
           v-for="script in scripts"
@@ -53,14 +57,18 @@ function difficultyStars(count: number): string {
           :class="{ active: selectedScriptId === script.id }"
           @click="onScriptSelect(script.id)"
         >
-          <div class="card-name">{{ script.name }}</div>
+          <div class="card-name">
+            {{ script.name }}
+          </div>
         </div>
       </div>
     </div>
 
     <!-- 选择案件 -->
     <div v-if="selectedScript" class="section">
-      <h2 class="section-title">选择案件</h2>
+      <h2 class="section-title">
+        选择案件
+      </h2>
       <div class="card-list">
         <div
           v-for="c in selectedScript.cases"
@@ -69,15 +77,21 @@ function difficultyStars(count: number): string {
           :class="{ active: selectedCaseId === c.id }"
           @click="onCaseSelect(c.id)"
         >
-          <div class="card-name">{{ c.name }}</div>
-          <div class="card-difficulty">难度：{{ difficultyStars(c.difficulty) }}</div>
+          <div class="card-name">
+            {{ c.name }}
+          </div>
+          <div class="card-difficulty">
+            难度：{{ difficultyStars(c.difficulty) }}
+          </div>
         </div>
       </div>
     </div>
 
     <!-- 操作按钮 -->
     <div class="actions">
-      <button class="btn-secondary" @click="goBack">返回</button>
+      <button class="btn-secondary" @click="goBack">
+        返回
+      </button>
       <button
         class="btn-primary"
         :disabled="!selectedScriptId || !selectedCaseId"

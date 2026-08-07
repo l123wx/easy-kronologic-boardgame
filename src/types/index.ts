@@ -2,7 +2,7 @@
 export interface OptionItem {
   id: string
   name: string
-  iconImage: string  // 列表展示用的小图（圆形选项）
+  iconImage: string // 列表展示用的小图（圆形选项）
 }
 
 /** 同一类型的资源映射表 */
@@ -10,9 +10,9 @@ export type CardImageMap = Record<string, string>
 
 /** 案件的线索重叠图（跟随案件变化） */
 export interface CaseCardImages {
-  rooms: CardImageMap       // 房间重叠图，key为roomId
-  times: CardImageMap       // 时间重叠图，key为timeId
-  characters: CardImageMap  // 人物重叠图，key为characterId
+  rooms: CardImageMap // 房间重叠图，key为roomId
+  times: CardImageMap // 时间重叠图，key为timeId
+  characters: CardImageMap // 人物重叠图，key为characterId
 }
 
 /** 案件 */
