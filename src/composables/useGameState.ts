@@ -8,7 +8,6 @@ interface PersistedState {
   selectedRoomId: string | null
   selectedTimeId: string | null
   selectedCharacterId: string | null
-  answerRevealed: boolean
 }
 
 interface GameState extends PersistedState {
@@ -32,7 +31,6 @@ function loadPersistedState(): PersistedState {
     selectedRoomId: null,
     selectedTimeId: null,
     selectedCharacterId: null,
-    answerRevealed: false,
   }
 }
 
@@ -43,7 +41,6 @@ function savePersistedState(state: GameState) {
     selectedRoomId: state.selectedRoomId,
     selectedTimeId: state.selectedTimeId,
     selectedCharacterId: state.selectedCharacterId,
-    answerRevealed: state.answerRevealed,
   }
   localStorage.setItem(STORAGE_KEY, JSON.stringify(data))
 }
@@ -60,7 +57,6 @@ const state = reactive<GameState>({
   selectedRoomId: persisted.selectedRoomId,
   selectedTimeId: persisted.selectedTimeId,
   selectedCharacterId: persisted.selectedCharacterId,
-  answerRevealed: persisted.answerRevealed,
   showClueOverlay: false,
   showAnswerConfirm: false,
   showAnswerImage: false,
@@ -74,7 +70,6 @@ watch(
     selectedRoomId: state.selectedRoomId,
     selectedTimeId: state.selectedTimeId,
     selectedCharacterId: state.selectedCharacterId,
-    answerRevealed: state.answerRevealed,
   }),
   () => savePersistedState(state),
   { deep: false },
@@ -132,8 +127,7 @@ export function useGameState() {
   }
 
   function openAnswerConfirm() {
-    if (!state.answerRevealed)
-      state.showAnswerConfirm = true
+    state.showAnswerConfirm = true
   }
 
   function closeAnswerConfirm() {
@@ -143,7 +137,6 @@ export function useGameState() {
   /** 确认查看答案：关闭弹窗，显示答案图片 */
   function revealAnswer() {
     state.showAnswerConfirm = false
-    state.answerRevealed = true
     state.showAnswerImage = true
   }
 
@@ -161,7 +154,6 @@ export function useGameState() {
     state.showClueOverlay = false
     state.showAnswerConfirm = false
     state.showAnswerImage = false
-    state.answerRevealed = false
     clearPersistedState()
   }
 

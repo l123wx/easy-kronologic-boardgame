@@ -19,9 +19,7 @@ const emit = defineEmits<{
           <h3 class="modal-title">
             {{ title }}
           </h3>
-          <p class="modal-message">
-            {{ message }}
-          </p>
+          <p class="modal-message" v-html="message" />
           <div class="modal-actions">
             <button class="btn-cancel" @click="emit('cancel')">
               取消

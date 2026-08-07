@@ -24,7 +24,6 @@ const {
   closeAnswerConfirm,
   revealAnswer,
   closeAnswerImage,
-  reset,
 } = useGameState()
 
 const roomList = computed(() => {
@@ -77,16 +76,15 @@ const answerImageUrl = computed(() => {
   return currentCase.value?.answerImage ?? ''
 })
 
-function goHome() {
-  reset()
-  router.push('/index')
+function goBack() {
+  router.push('/setup')
 }
 
 function handleRevealAnswer() {
   openAnswerConfirm()
 }
 
-const confirmMessage = '确认提交答案吗？\n每人仅有一次回答机会，猜错则直接出局。\n查看答案之后，无论对错，都不要将答案告诉其他玩家，以免影响游戏体验。'
+const confirmMessage = '确认提交答案吗？<br><b>每人仅有一次回答机会，猜错则直接出局。</b><br>查看答案之后，无论对错，都不要将答案告诉其他玩家，以免影响游戏体验。'
 
 // 预加载进度
 const loading = ref(true)
@@ -127,18 +125,22 @@ onMounted(async () => {
     <Transition name="fade">
       <div v-if="loading" class="loading-overlay">
         <div class="loading-content">
-          <p class="loading-text">资源加载中...</p>
+          <p class="loading-text">
+            资源加载中...
+          </p>
           <div class="progress-bar">
-            <div class="progress-fill" :style="{ width: loadingPercent + '%' }" />
+            <div class="progress-fill" :style="{ width: `${loadingPercent}%` }" />
           </div>
-          <p class="loading-count">{{ loadedCount }} / {{ totalCount }}</p>
+          <p class="loading-count">
+            {{ loadedCount }} / {{ totalCount }}
+          </p>
         </div>
       </div>
     </Transition>
 
     <div class="game-header">
-      <button class="header-btn home-btn" @click="goHome">
-        返回首页
+      <button class="header-btn home-btn" @click="goBack">
+        返回上一页
       </button>
       <div v-if="currentScript && currentCase" class="header-info">
         <span class="header-script">{{ currentScript?.name }}</span>
@@ -146,10 +148,9 @@ onMounted(async () => {
       </div>
       <button
         class="header-btn answer-btn"
-        :disabled="state.answerRevealed"
         @click="handleRevealAnswer"
       >
-        {{ state.answerRevealed ? '已查看答案' : '查看答案' }}
+        查看答案
       </button>
     </div>
 

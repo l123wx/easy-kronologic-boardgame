@@ -60,6 +60,7 @@ function difficultyStars(count: number): string {
           <div class="card-name">
             {{ script.name }}
           </div>
+          <div class="card-count">{{ script.cases.length }} 个案件</div>
         </div>
       </div>
     </div>
@@ -161,6 +162,11 @@ function difficultyStars(count: number): string {
   font-weight: 600;
   color: #333;
   margin-bottom: 4px;
+}
+
+.card-count {
+  font-size: 13px;
+  color: #999;
 }
 
 .card-difficulty {
