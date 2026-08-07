@@ -6,7 +6,7 @@ import OptionRow from '@/components/OptionRow.vue'
 import TimeCircle from '@/components/TimeCircle.vue'
 import { useGameState } from '@/composables/useGameState'
 import { characters, rooms, times } from '@/config'
-import { computed } from 'vue'
+import { computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
@@ -87,6 +87,22 @@ function handleRevealAnswer() {
 }
 
 const confirmMessage = '确认提交答案吗？\n每人仅有一次回答机会，猜错则直接出局。\n查看答案之后，无论对错，都不要将答案告诉其他玩家，以免影响游戏体验。'
+
+// 预加载当前案件的所有重叠图，防止点击查看线索时先露出房间图
+onMounted(() => {
+  if (!currentCase.value)
+    return
+  const images = currentCase.value.cardImages
+  const urls = [
+    ...Object.values(images.rooms),
+    ...Object.values(images.times),
+    ...Object.values(images.characters),
+  ]
+  urls.forEach((url) => {
+    const img = new Image()
+    img.src = url
+  })
+})
 </script>
 
 <template>
@@ -96,8 +112,8 @@ const confirmMessage = '确认提交答案吗？\n每人仅有一次回答机会
         返回首页
       </button>
       <div v-if="currentScript && currentCase" class="header-info">
-        <span class="header-script">{{ currentScript.name }}</span>
-        <span class="header-case">{{ currentCase.name }}</span>
+        <span class="header-script">{{ currentScript.value?.name }}</span>
+        <span class="header-case">{{ currentCase.value?.name }}</span>
       </div>
       <button
         class="header-btn answer-btn"
