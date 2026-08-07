@@ -112,8 +112,8 @@ onMounted(() => {
         返回首页
       </button>
       <div v-if="currentScript && currentCase" class="header-info">
-        <span class="header-script">{{ currentScript.value?.name }}</span>
-        <span class="header-case">{{ currentCase.value?.name }}</span>
+        <span class="header-script">{{ currentScript?.name }}</span>
+        <span class="header-case">{{ currentCase?.name }}</span>
       </div>
       <button
         class="header-btn answer-btn"
