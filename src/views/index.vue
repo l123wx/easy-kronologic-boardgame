@@ -90,7 +90,9 @@ async function downloadAnswerSheet() {
 }
 
 .start-btn {
+  display: block;
   width: 220px;
+  margin: 0 auto;
   padding: 16px 0;
   font-size: 20px;
   font-weight: 600;
@@ -109,8 +111,9 @@ async function downloadAnswerSheet() {
 }
 
 .rules-btn {
+  display: block;
   width: 220px;
-  margin-top: 16px;
+  margin: 16px auto 0;
   padding: 12px 0;
   font-size: 16px;
   font-weight: 500;
