@@ -1,0 +1,139 @@
+{
+  "rooms": {
+    "grand-foyer": { "id": "grand-foyer", "name": "大前厅", "iconImage": "/images/place_大前厅.png" },
+    "grand-staircase": { "id": "grand-staircase", "name": "大阶梯", "iconImage": "/images/place_大阶梯.png" },
+    "stage": { "id": "stage", "name": "舞台", "iconImage": "/images/place_舞台.png" },
+    "music-room": { "id": "music-room", "name": "音乐厅", "iconImage": "/images/place_音乐厅.png" },
+    "gallery": { "id": "gallery", "name": "画廊", "iconImage": "/images/place_画廊.png" },
+    "ballroom": { "id": "ballroom", "name": "舞厅", "iconImage": "/images/place_舞厅.png" }
+  },
+  "times": {
+    "1": { "id": "1", "name": "1", "iconImage": "/images/time_1.png" },
+    "2": { "id": "2", "name": "2", "iconImage": "/images/time_2.png" },
+    "3": { "id": "3", "name": "3", "iconImage": "/images/time_3.png" },
+    "4": { "id": "4", "name": "4", "iconImage": "/images/time_4.png" },
+    "5": { "id": "5", "name": "5", "iconImage": "/images/time_5.png" },
+    "6": { "id": "6", "name": "6", "iconImage": "/images/time_6.png" }
+  },
+  "characters": {
+    "duchess": { "id": "duchess", "name": "女爵", "iconImage": "/images/people_1.png" },
+    "explorer": { "id": "explorer", "name": "探险家", "iconImage": "/images/people_2.jpg" },
+    "detective": { "id": "detective", "name": "侦探", "iconImage": "/images/people_3.png" },
+    "maid": { "id": "maid", "name": "女仆", "iconImage": "/images/people_4.png" },
+    "driver": { "id": "driver", "name": "司机", "iconImage": "/images/people_5.jpg" },
+    "journalist": { "id": "journalist", "name": "记者", "iconImage": "/images/people_6.png" }
+  },
+  "scripts": [
+    {
+      "id": "notorious-poisoning",
+      "name": "名流毒杀案",
+      "cases": [
+        {
+          "id": "case-1",
+          "name": "案件一",
+          "difficulty": 1,
+          "setupImages": ["/images/setup_1-1.png", "/images/setup_1-2.png", "/images/setup_1_1.jpg"],
+          "answerImage": "/images/placeholder.svg",
+          "cardImages": {
+            "rooms": {
+              "grand-foyer": "/images/place_1_1_大前厅.png",
+              "grand-staircase": "/images/place_1_1_大阶梯.png",
+              "stage": "/images/place_1_1_舞台.png",
+              "music-room": "/images/place_1_1_音乐厅.png",
+              "gallery": "/images/place_1_1_画廊.png",
+              "ballroom": "/images/place_1_1_舞厅.png"
+            },
+            "times": {
+              "1": "/images/card_time_1.png",
+              "2": "/images/card_time_2.png",
+              "3": "/images/card_time_3.png",
+              "4": "/images/card_time_4.png",
+              "5": "/images/card_time_5.png",
+              "6": "/images/card_time_6.png"
+            },
+            "characters": {
+              "duchess": "/images/card_people_1.png",
+              "explorer": "/images/card_people_2.png",
+              "detective": "/images/card_people_3.png",
+              "maid": "/images/card_people_4.png",
+              "driver": "/images/card_people_5.png",
+              "journalist": "/images/card_people_6.png"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "the singer’s jewels",
+      "name": "珠宝失窃案",
+      "cases": [
+        {
+          "id": "case-1",
+          "name": "案件一",
+          "difficulty": 3,
+          "setupImages": ["/images/placeholder.svg"],
+          "answerImage": "/images/placeholder.svg",
+          "cardImages": {
+            "rooms": {
+              "grand-foyer": "/images/place_3_1_大前厅.png",
+              "grand-staircase": "/images/place_3_1_大阶梯.png",
+              "stage": "/images/place_3_1_舞台.png",
+              "music-room": "/images/place_3_1_音乐厅.png",
+              "gallery": "/images/place_3_1_画廊.png",
+              "ballroom": "/images/place_3_1_舞厅.png"
+            },
+            "times": {
+              "1": "/images/card_time_1.png",
+              "2": "/images/card_time_2.png",
+              "3": "/images/card_time_3.png",
+              "4": "/images/card_time_4.png",
+              "5": "/images/card_time_5.png",
+              "6": "/images/card_time_6.png"
+            },
+            "characters": {
+              "duchess": "/images/card_people_1.png",
+              "explorer": "/images/card_people_2.png",
+              "detective": "/images/card_people_3.png",
+              "maid": "/images/card_people_4.png",
+              "driver": "/images/card_people_5.png",
+              "journalist": "/images/card_people_6.png"
+            }
+          }
+        },
+        {
+          "id": "case-2",
+          "name": "案件二",
+          "difficulty": 4,
+          "setupImages": ["/images/placeholder.svg"],
+          "answerImage": "/images/placeholder.svg",
+          "cardImages": {
+            "rooms": {
+              "grand-foyer": "/images/place_3_2_大前厅.png",
+              "grand-staircase": "/images/place_3_2_大阶梯.png",
+              "stage": "/images/place_3_2_舞台.png",
+              "music-room": "/images/place_3_2_音乐厅.png",
+              "gallery": "/images/place_3_2_画廊.png",
+              "ballroom": "/images/place_3_2_舞厅.png"
+            },
+            "times": {
+              "1": "/images/card_time_1.png",
+              "2": "/images/card_time_2.png",
+              "3": "/images/card_time_3.png",
+              "4": "/images/card_time_4.png",
+              "5": "/images/card_time_5.png",
+              "6": "/images/card_time_6.png"
+            },
+            "characters": {
+              "duchess": "/images/card_people_1.png",
+              "explorer": "/images/card_people_2.png",
+              "detective": "/images/card_people_3.png",
+              "maid": "/images/card_people_4.png",
+              "driver": "/images/card_people_5.png",
+              "journalist": "/images/card_people_6.png"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

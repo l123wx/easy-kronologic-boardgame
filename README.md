@@ -1,45 +1,12 @@
-# 自动部署项目到 GitHub Pages 的项目模板
+这是一个名为《时空神探》桌游的辅助网页
 
-简体中文 | [English](./README_EN.md)
-
-**使用 Vue3 + Typescript + Vite**
-
-已经配置好 GitHub Actions，推送代码到 master 分支就会自动部署项目到 GitHub Pages 生成预览页面
-
-## 使用这个模版的好处
-
- - 只需要一个操作，不需要额外的配置
- - 无需修改 YAML 文件，自动根据 package.json packageManager 配置选择包管理器，确保行为一致性
- - 不会生成多余的分支
-
-## 操作步骤
-
-只需在 GitHub 仓库 Setting > Pages > Source 选择 GitHub Actions
-
-![image](https://github.com/l123wx/vite-vue-github-pages/assets/48666585/77d1bcf1-a066-4a63-8423-e16491815048)
-
-后续推送代码到 master 分支都会自动打包并部署到 GitHub Pages
-
-## 在其他项目中使用
-
-将 `.github/workflows/main.yml` 文件复制到你想改造的项目，根据项目实际情况调整打包步骤：
-
-```yaml
-# 安装依赖
-- name: Install dependencies
-  run: ni
-# 打包项目
-- name: Build
-  run: nr build
-```
-
-使用了 @antfu/ni 库来实现包管理器的自动识别，`ni` 等效于 `npm install`，`nr` 等效于 `npm run`，更多命令可以查看[官方文档](https://github.com/antfu-collective/ni#ni)
-
-默认的 `Jekyll` 打包路径为 `dist`，如果项目 build 输出路径不是 `dist`，可以修改 Build with Jekyll 步骤的 `source`：
-
-```yaml
-- name: Build with Jekyll
-  uses: actions/jekyll-build-pages@v1
-  with:
-    source: ./dist
-```
+ - 首页显示标题：时空神探，开始游戏按钮
+ - 点击开始游戏后，进入案件选择界面。先选剧本，再选案件。例如：名流毒杀案 -> 案件一，难度：⭐。
+ - 选完案件之后，先显示初始设置界面，这个界面是展示初始设置的图片，可能有多张
+ - 然后正式进入游戏，主界面显示三行元素：1、房间选项；2、时间选项；3、人物选项；三种选项都是原型图片，房间和人物选项在图片下面显示名称，时间不需要。其中，房间是必选项，然后时间和人物只能选一个，这两个选项会决定两张图片，当选择完成后，点击查看线索按钮，将两张图片重叠展示出来，房间图片在下方展示。
+   - 房间：大前厅、大阶梯、舞台、音乐厅、画廊、舞厅
+   - 时间：1、2、3、4、5、6
+   - 人物：女爵、探险家、侦探、女仆、司机、记者
+ - 在主界面再添加查看答案和返回首页按钮。点击查看答案，弹窗提示：确认提交答案吗？没人仅有一次回答机会，猜错则直接出局。查看答案之后，无论对错，都不要将答案告诉其他玩家，以免影响游戏体验。
+ - 对于所有图片，先使用一张占位图显示
+ - 将所有的列表、图片，抽出一个配置json，方便后续扩展和修改剧本
