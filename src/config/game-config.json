@@ -293,6 +293,265 @@
               "journalist": "./images/card_people_6.png"
             }
           }
+        },
+        {
+          "id": "case-6",
+          "name": "案件六",
+          "difficulty": 3,
+          "setupImages": [
+            "./images/setup_1-1.jpg",
+            "./images/setup_1-2.jpg",
+            "./images/setup_1_6.jpg"
+          ],
+          "answerImage": "./images/answer_1_6.jpg",
+          "cardImages": {
+            "rooms": {
+              "grand-foyer": "./images/place_1_6_大前厅.png",
+              "grand-staircase": "./images/place_1_6_大阶梯.png",
+              "stage": "./images/place_1_6_舞台.png",
+              "music-room": "./images/place_1_6_音乐厅.png",
+              "gallery": "./images/place_1_6_画廊.png",
+              "ballroom": "./images/place_1_6_舞厅.png"
+            },
+            "times": {
+              "1": "./images/card_time_1.png",
+              "2": "./images/card_time_2.png",
+              "3": "./images/card_time_3.png",
+              "4": "./images/card_time_4.png",
+              "5": "./images/card_time_5.png",
+              "6": "./images/card_time_6.png"
+            },
+            "characters": {
+              "duchess": "./images/card_people_1.png",
+              "explorer": "./images/card_people_2.png",
+              "detective": "./images/card_people_3.png",
+              "maid": "./images/card_people_4.png",
+              "driver": "./images/card_people_5.png",
+              "journalist": "./images/card_people_6.png"
+            }
+          }
+        },
+        {
+          "id": "case-7",
+          "name": "案件七",
+          "difficulty": 3,
+          "setupImages": [
+            "./images/setup_1-1.jpg",
+            "./images/setup_1-2.jpg",
+            "./images/setup_1_7.jpg"
+          ],
+          "answerImage": "./images/answer_1_7.jpg",
+          "cardImages": {
+            "rooms": {
+              "grand-foyer": "./images/place_1_7_大前厅.png",
+              "grand-staircase": "./images/place_1_7_大阶梯.png",
+              "stage": "./images/place_1_7_舞台.png",
+              "music-room": "./images/place_1_7_音乐厅.png",
+              "gallery": "./images/place_1_7_画廊.png",
+              "ballroom": "./images/place_1_7_舞厅.png"
+            },
+            "times": {
+              "1": "./images/card_time_1.png",
+              "2": "./images/card_time_2.png",
+              "3": "./images/card_time_3.png",
+              "4": "./images/card_time_4.png",
+              "5": "./images/card_time_5.png",
+              "6": "./images/card_time_6.png"
+            },
+            "characters": {
+              "duchess": "./images/card_people_1.png",
+              "explorer": "./images/card_people_2.png",
+              "detective": "./images/card_people_3.png",
+              "maid": "./images/card_people_4.png",
+              "driver": "./images/card_people_5.png",
+              "journalist": "./images/card_people_6.png"
+            }
+          }
+        },
+        {
+          "id": "case-8",
+          "name": "案件八",
+          "difficulty": 3,
+          "setupImages": [
+            "./images/setup_1-1.jpg",
+            "./images/setup_1-2.jpg",
+            "./images/setup_1_8.jpg"
+          ],
+          "answerImage": "./images/answer_1_8.jpg",
+          "cardImages": {
+            "rooms": {
+              "grand-foyer": "./images/place_1_8_大前厅.png",
+              "grand-staircase": "./images/place_1_8_大阶梯.png",
+              "stage": "./images/place_1_8_舞台.png",
+              "music-room": "./images/place_1_8_音乐厅.png",
+              "gallery": "./images/place_1_8_画廊.png",
+              "ballroom": "./images/place_1_8_舞厅.png"
+            },
+            "times": {
+              "1": "./images/card_time_1.png",
+              "2": "./images/card_time_2.png",
+              "3": "./images/card_time_3.png",
+              "4": "./images/card_time_4.png",
+              "5": "./images/card_time_5.png",
+              "6": "./images/card_time_6.png"
+            },
+            "characters": {
+              "duchess": "./images/card_people_1.png",
+              "explorer": "./images/card_people_2.png",
+              "detective": "./images/card_people_3.png",
+              "maid": "./images/card_people_4.png",
+              "driver": "./images/card_people_5.png",
+              "journalist": "./images/card_people_6.png"
+            }
+          }
+        },
+        {
+          "id": "case-9",
+          "name": "案件九",
+          "difficulty": 3,
+          "setupImages": [
+            "./images/setup_1-1.jpg",
+            "./images/setup_1-2.jpg",
+            "./images/setup_1_9.jpg"
+          ],
+          "answerImage": "./images/answer_1_9.jpg",
+          "cardImages": {
+            "rooms": {
+              "grand-foyer": "./images/place_1_9_大前厅.png",
+              "grand-staircase": "./images/place_1_9_大阶梯.png",
+              "stage": "./images/place_1_9_舞台.png",
+              "music-room": "./images/place_1_9_音乐厅.png",
+              "gallery": "./images/place_1_9_画廊.png",
+              "ballroom": "./images/place_1_9_舞厅.png"
+            },
+            "times": {
+              "1": "./images/card_time_1.png",
+              "2": "./images/card_time_2.png",
+              "3": "./images/card_time_3.png",
+              "4": "./images/card_time_4.png",
+              "5": "./images/card_time_5.png",
+              "6": "./images/card_time_6.png"
+            },
+            "characters": {
+              "duchess": "./images/card_people_1.png",
+              "explorer": "./images/card_people_2.png",
+              "detective": "./images/card_people_3.png",
+              "maid": "./images/card_people_4.png",
+              "driver": "./images/card_people_5.png",
+              "journalist": "./images/card_people_6.png"
+            }
+          }
+        },
+        {
+          "id": "case-10",
+          "name": "案件十",
+          "difficulty": 3,
+          "setupImages": [
+            "./images/setup_1-1.jpg",
+            "./images/setup_1-2.jpg",
+            "./images/setup_1_10.jpg"
+          ],
+          "answerImage": "./images/answer_1_10.jpg",
+          "cardImages": {
+            "rooms": {
+              "grand-foyer": "./images/place_1_10_大前厅.png",
+              "grand-staircase": "./images/place_1_10_大阶梯.png",
+              "stage": "./images/place_1_10_舞台.png",
+              "music-room": "./images/place_1_10_音乐厅.png",
+              "gallery": "./images/place_1_10_画廊.png",
+              "ballroom": "./images/place_1_10_舞厅.png"
+            },
+            "times": {
+              "1": "./images/card_time_1.png",
+              "2": "./images/card_time_2.png",
+              "3": "./images/card_time_3.png",
+              "4": "./images/card_time_4.png",
+              "5": "./images/card_time_5.png",
+              "6": "./images/card_time_6.png"
+            },
+            "characters": {
+              "duchess": "./images/card_people_1.png",
+              "explorer": "./images/card_people_2.png",
+              "detective": "./images/card_people_3.png",
+              "maid": "./images/card_people_4.png",
+              "driver": "./images/card_people_5.png",
+              "journalist": "./images/card_people_6.png"
+            }
+          }
+        },
+        {
+          "id": "case-11",
+          "name": "案件十一",
+          "difficulty": 3,
+          "setupImages": [
+            "./images/setup_1-1.jpg",
+            "./images/setup_1-2.jpg",
+            "./images/setup_1_11.jpg"
+          ],
+          "answerImage": "./images/answer_1_11.jpg",
+          "cardImages": {
+            "rooms": {
+              "grand-foyer": "./images/place_1_11_大前厅.png",
+              "grand-staircase": "./images/place_1_11_大阶梯.png",
+              "stage": "./images/place_1_11_舞台.png",
+              "music-room": "./images/place_1_11_音乐厅.png",
+              "gallery": "./images/place_1_11_画廊.png",
+              "ballroom": "./images/place_1_11_舞厅.png"
+            },
+            "times": {
+              "1": "./images/card_time_1.png",
+              "2": "./images/card_time_2.png",
+              "3": "./images/card_time_3.png",
+              "4": "./images/card_time_4.png",
+              "5": "./images/card_time_5.png",
+              "6": "./images/card_time_6.png"
+            },
+            "characters": {
+              "duchess": "./images/card_people_1.png",
+              "explorer": "./images/card_people_2.png",
+              "detective": "./images/card_people_3.png",
+              "maid": "./images/card_people_4.png",
+              "driver": "./images/card_people_5.png",
+              "journalist": "./images/card_people_6.png"
+            }
+          }
+        },
+        {
+          "id": "case-12",
+          "name": "案件十二",
+          "difficulty": 3,
+          "setupImages": [
+            "./images/setup_1-1.jpg",
+            "./images/setup_1-2.jpg",
+            "./images/setup_1_12.jpg"
+          ],
+          "answerImage": "./images/answer_1_12.jpg",
+          "cardImages": {
+            "rooms": {
+              "grand-foyer": "./images/place_1_12_大前厅.png",
+              "grand-staircase": "./images/place_1_12_大阶梯.png",
+              "stage": "./images/place_1_12_舞台.png",
+              "music-room": "./images/place_1_12_音乐厅.png",
+              "gallery": "./images/place_1_12_画廊.png",
+              "ballroom": "./images/place_1_12_舞厅.png"
+            },
+            "times": {
+              "1": "./images/card_time_1.png",
+              "2": "./images/card_time_2.png",
+              "3": "./images/card_time_3.png",
+              "4": "./images/card_time_4.png",
+              "5": "./images/card_time_5.png",
+              "6": "./images/card_time_6.png"
+            },
+            "characters": {
+              "duchess": "./images/card_people_1.png",
+              "explorer": "./images/card_people_2.png",
+              "detective": "./images/card_people_3.png",
+              "maid": "./images/card_people_4.png",
+              "driver": "./images/card_people_5.png",
+              "journalist": "./images/card_people_6.png"
+            }
+          }
         }
       ]
     },
